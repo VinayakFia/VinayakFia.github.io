@@ -3,6 +3,7 @@ import { cssPath, rootDirectory } from "./path";
 import { Image } from "./types/Image";
 import { Page } from "./types/Page";
 import path from "path";
+import showdown from "showdown";
 
 export type PageRenderResult = {
   directory: string;
@@ -56,6 +57,7 @@ const displayedExif = [
 ];
 export const renderImages = async (images: Image[]): Promise<string> => {
   const imageTemplate = await readFile(templateFiles.image, "utf8");
+  const converter = new showdown.Converter();
   return images
     .map((image) => {
       let imageHtml = `${imageTemplate}`;
@@ -67,19 +69,24 @@ export const renderImages = async (images: Image[]): Promise<string> => {
             ? JSON.stringify(image.exif?.exif, null, 2)
             : "",
         },
-        { tag: tags.image.TITLE, text: "null" },
-        { tag: tags.image.DESCRIPTION, text: "null" },
+        { tag: tags.image.TITLE, text: image.path.split("\\").pop() ?? "null" },
+        {
+          tag: tags.image.DESCRIPTION,
+          text: image.description
+            ? converter.makeHtml(image.description)
+            : "Desc: null",
+        },
         {
           tag: tags.image.ROW,
           text: Object.entries(image.exif?.exif ?? {})
             .filter(([key]) => displayedExif.includes(key))
             .map(
               ([key, value]) => `
-          <tr>
-            <th>${key}</th>
-            <td>${value}</td>
-          </tr>
-        `
+                <tr>
+                  <th>${key}</th>
+                  <td>${value}</td>
+                </tr>
+              `
             )
             .join("\n"),
         },

@@ -7,6 +7,7 @@ import {
 } from "./utils/gallery_utils";
 import { rootDirectory } from "./path";
 import { ExifData, ExifImage } from "exif";
+import { readFileSync } from "fs";
 
 const getExifData = async (filePath: string): Promise<ExifData | undefined> =>
   new Promise<ExifData | undefined>((resolve, reject) => {
@@ -24,6 +25,15 @@ const getExifData = async (filePath: string): Promise<ExifData | undefined> =>
       resolve(undefined);
     }
   });
+
+const getFileDescription = (filePath: string): string | undefined => {
+  const path = filePath + ".md";
+  try {
+    return readFileSync(path, "utf-8");
+  } catch {
+    return undefined;
+  }
+};
 
 export const buildPage = async (dir: string): Promise<Page> => {
   const [files, directories] = await Promise.all([
@@ -45,6 +55,8 @@ export const buildPage = async (dir: string): Promise<Page> => {
             rootDirectory + "/" + config.url,
             file.parentPath + "/" + file.name
           ),
+          title: file.name,
+          description: getFileDescription(file.parentPath + "/" + file.name),
           exif: exifData,
         };
       })
