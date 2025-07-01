@@ -1,0 +1,45 @@
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 4px solid var(--secondary-color); */
+    border-left: 0;
+    /* background-color: var(--secondary-color); */
+  "
+>
+  <img src="{{ IMAGE_SRC }}" style="height: 100vh; object-fit: cover" />
+</div>
+<hgroup
+  style="
+    padding-top: var(--global-space);
+    padding-left: calc(var(--global-space) * 4);
+    margin-left: calc(var(--global-space) * 4);
+    margin-right: calc(var(--global-space) * 4);
+    border-left: 1px dashed var(--secondary-color);
+    border-bottom: 0;
+    height: 100%;
+  "
+>
+  <h3 style="padding-left: 8px">Name: {{ IMAGE_TITLE }}</h3>
+  <p style="padding-left: 8px">Description: {{ IMAGE_DESCRIPTION }}</p>
+  <hr />
+  <table>
+    <caption>
+      Specs
+    </caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+    <tbody>
+      {{ ROW }}
+    </tbody>
+  </table>
+</hgroup>
+
+<hr />
+<hr />
