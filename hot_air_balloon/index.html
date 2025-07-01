@@ -9,9 +9,7 @@
   </head>
   <body>
     <div id="main">
-      <aside
-        style="padding: 20px; border-right: 1px dashed var(--secondary-color)"
-      >
+      <aside id="navbar">
         <nav>
           <ul>
             <li>
@@ -32,20 +30,23 @@
           <p>abcd</p>
         </main>
 
-        <div style="display: grid; grid-template-columns: auto auto">
-          <hr />
-          <hr />
-          <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+        <hr />
+
+        <div id="image-grid"><div
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04194.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04194.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -114,19 +115,35 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
+
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
 
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04198.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04198.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -195,19 +212,35 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
+
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
 
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04211.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04211.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -276,19 +309,35 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
+
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
 
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04244.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04244.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -357,19 +406,35 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
+
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
 
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04282.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04282.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -438,19 +503,35 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
+
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
 
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04292.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04292.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -519,19 +600,35 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
+
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
 
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* border: 4px solid var(--secondary-color); */
-    border-left: 0;
-    /* background-color: var(--secondary-color); */
-  "
+  style="display: flex; justify-content: center; width: 100%; border-left: 0"
 >
-  <img src="..\gallery\hot_air_balloon\20250522-DSC04297.jpg" style="height: 100vh; object-fit: cover" />
+  <img
+    src="..\gallery\hot_air_balloon\20250522-DSC04297.jpg"
+    style="
+      height: min(100vh, 100vw);
+      width: min(100vh, 100vw);
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: scale-down;
+      margin-top: calc(var(--global-space) * 4);
+      margin-bottom: calc(var(--global-space) * 4);
+    "
+  />
 </div>
 <hgroup
   style="
@@ -600,9 +697,20 @@
 </hgroup>
 
 <hr />
-<hr />
+<hr class="image-divider" />
 
-        </div>
+<style>
+  .image-divider {
+    display: block;
+  }
+
+  @media (max-width: 799px) {
+    .image-divider {
+      display: none;
+    }
+  }
+</style>
+</div>
         <footer>
           <ul>
             <li>
@@ -627,6 +735,30 @@
   #main {
     display: flex;
     flex-direction: row;
+  }
+
+  #image-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  #navbar {
+    padding: 20px;
+    border-right: 1px dashed var(--secondary-color);
+  }
+
+  @media (max-width: 799px) {
+    #main {
+      flex-direction: column;
+    }
+
+    #image-grid {
+      grid-template-columns: auto;
+    }
+
+    #navbar {
+      padding: 50px;
+    }
   }
 
   nav {

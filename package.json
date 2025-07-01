@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/main.ts",
   "scripts": {
-    "start:dev": "npx nodemon"
+    "start:dev": "npx nodemon",
+    "build": "ts-node src/main.ts"
   },
   "author": "",
   "license": "ISC",

@@ -9,9 +9,7 @@
   </head>
   <body>
     <div id="main">
-      <aside
-        style="padding: 20px; border-right: 1px dashed var(--secondary-color)"
-      >
+      <aside id="navbar">
         <nav>
           <ul>
             <li>
@@ -30,11 +28,9 @@
           <p>{{ PAGE_DESCRIPTION }}</p>
         </main>
 
-        <div style="display: grid; grid-template-columns: auto auto">
-          <hr />
-          <hr />
-          {{ IMAGES }}
-        </div>
+        <hr />
+
+        <div id="image-grid">{{ IMAGES }}</div>
         <footer>
           <ul>
             <li>
@@ -59,6 +55,30 @@
   #main {
     display: flex;
     flex-direction: row;
+  }
+
+  #image-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  #navbar {
+    padding: 20px;
+    border-right: 1px dashed var(--secondary-color);
+  }
+
+  @media (max-width: 799px) {
+    #main {
+      flex-direction: column;
+    }
+
+    #image-grid {
+      grid-template-columns: auto;
+    }
+
+    #navbar {
+      padding: 50px;
+    }
   }
 
   nav {
